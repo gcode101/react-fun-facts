@@ -1,16 +1,21 @@
 import logo from '../logo.webp';
 
-function Navbar () {
+function Navbar (props) {
 	return (
-		<div className='nav'>
+		<nav className={'dark'}>
+		{/*<div className={props.darkMode ? "dark" : ""}>*/}
 			<div className='header'>
 				<img src={logo} className="logo" alt="logo" />
 				<h1>ReactFacts</h1>
 			</div>
-			<div>
-				<h2> React Course - Project 1</h2>
+			<div className="toggler">
+				<p className="toggler--light">Light</p>
+				<div className="toggler--slider" onClick={props.toggleDarkMode}>
+					<div className="toggler--slider--circle"></div>
+				</div>
+				<p className="toggler--dark">Dark</p>
 			</div>
-		</div>
+		</nav>
 	);
 }
 
