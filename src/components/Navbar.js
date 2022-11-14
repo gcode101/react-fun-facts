@@ -1,9 +1,11 @@
 import logo from '../logo.webp';
+import React from "react"
+import Main from "./Main"
 
 function Navbar (props) {
+
 	return (
-		<nav className={'dark'}>
-		{/*<div className={props.darkMode ? "dark" : ""}>*/}
+		<nav className={props.darkMode ? "dark" : ""}>
 			<div className='header'>
 				<img src={logo} className="logo" alt="logo" />
 				<h1>ReactFacts</h1>
